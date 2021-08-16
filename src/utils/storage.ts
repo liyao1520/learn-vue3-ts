@@ -27,3 +27,5 @@ export const setItem: (name: string, value: any) => void = (name, value) => {
 export const removeItem: (name: string) => void = (name) => {
   window.localStorage.removeItem(name)
 }
+
+//测试一下
