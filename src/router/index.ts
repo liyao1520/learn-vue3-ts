@@ -21,7 +21,7 @@ const router = createRouter({
   history: createWebHistory()
 })
 router.beforeEach((to) => {
-  console.log(to)
+  // console.log(to)
 
   if (!getItem('token') && to.path !== '/login') {
     return '/login'

@@ -1,10 +1,8 @@
 import { ILoginState } from './login/type'
 
-export interface IRootState {
-  menu: []
-}
+export interface IRootState {}
 export interface IRootWithModule {
-  login: ILoginState
+  loginModule: ILoginState
 }
 
 export type IStoreType = IRootState & IRootWithModule

@@ -1,12 +1,17 @@
 import Request from './request'
 
+import store from '@/store'
+import { getItem } from '@/utils/storage'
+console.log(store)
+
 export const request = new Request({
   baseURL: '/api',
   timeout: 5000,
   interceptors: {
     requestInterceptor(config) {
       console.log('____________________请求拦截器__________________')
-      // config.headers.token = store.state.login.token
+      const token = getItem('token')
+      config.headers.Authorization = `Bearer ${token}`
       return config
     },
     requestInterceptorCatch(err) {

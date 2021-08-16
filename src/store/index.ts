@@ -4,11 +4,6 @@ import { loginModule } from './login/index'
 import { IRootState, IStoreType } from './types'
 
 const store = createStore<IRootState>({
-  state() {
-    return {
-      menu: []
-    }
-  },
   modules: {
     loginModule
   },
@@ -18,11 +13,6 @@ const store = createStore<IRootState>({
         url: `/role/${userId}/menuIds`
       })
       ctx.commit('setMenu', data)
-    }
-  },
-  mutations: {
-    setMenu(state, menu) {
-      state.menu = menu
     }
   }
 })

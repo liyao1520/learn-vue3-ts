@@ -14,5 +14,5 @@ export const reqLogin = (data: ILoginData) =>
 //查询角色菜单ids
 export const reqGetMenusById = (userId: number) =>
   request({
-    url: `/role/${userId}/menuIds`
+    url: `/role/${userId}/menu`
   })
