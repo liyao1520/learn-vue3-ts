@@ -13,3 +13,4 @@ app.mount('#app')
 //css
 import 'normalize.css'
 import '@/assets/css/index.less'
+//GitHub上按.有惊喜
